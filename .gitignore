@@ -1,0 +1,27 @@
+# Vivado Project Files
+.ip_user_files/
+.sim/
+.hw/
+.runs/
+.cache/
+*.jou
+*.log
+*.backup*
+*.tmp
+
+# Simulation Files (ModelSim/QuestaSim)
+transcript
+*.wlf
+*.udo
+*.fdo
+
+# OS and Editor Temp Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+*.bak
+
+# Optional: Bitstream files (if you don't want to track them)
+*.bit
