@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log hw1_logic_circuit.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hw1_logic_circuit.tcl
+EAStep vivado -log hw2_logiccircuit.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hw2_logiccircuit.tcl

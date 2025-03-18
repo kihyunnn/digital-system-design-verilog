@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../2week_homework.srcs/sources_1/new/hw2_logiccircuit.v" \
+"../../../../2week_homework.srcs/sim_1/new/hw2_logiccircuit_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

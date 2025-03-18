@@ -29,7 +29,7 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:2.0 [current_project]
 set_property ip_output_repo e:/Dev/dev-git/digital-system-design-verilog/design_practice/2week/2week_homework/2week_homework.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib E:/Dev/dev-git/digital-system-design-verilog/design_practice/2week/2week_homework/2week_homework.srcs/sources_1/new/homework1.v
+read_verilog -library xil_defaultlib E:/Dev/dev-git/digital-system-design-verilog/design_practice/2week/2week_homework/2week_homework.srcs/sources_1/new/hw2_logiccircuit.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -41,12 +41,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top hw1_logic_circuit -part xc7z010clg400-1
+synth_design -top hw2_logiccircuit -part xc7z010clg400-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef hw1_logic_circuit.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file hw1_logic_circuit_utilization_synth.rpt -pb hw1_logic_circuit_utilization_synth.pb"
+write_checkpoint -force -noxdef hw2_logiccircuit.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file hw2_logiccircuit_utilization_synth.rpt -pb hw2_logiccircuit_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
