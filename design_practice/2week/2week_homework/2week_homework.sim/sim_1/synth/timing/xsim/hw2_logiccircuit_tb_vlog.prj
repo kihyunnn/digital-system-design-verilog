@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"hw2_logiccircuit_tb_time_synth.v" \
+"../../../../../2week_homework.srcs/sim_1/new/hw2_logiccircuit_tb.v" \
+
+# Do not sort compile order
+nosort

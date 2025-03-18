@@ -21,20 +21,20 @@
 
 `timescale 1ns / 1ps
 module hw1_logic_circuit_tb;
-    // input : leg타입으로 선언
+    // input : leg타입으로 선언 총 3개 인풋
     reg A, B, C;
     wire Y; //output : WIre Type으로 선언
     
     // 테스트할 모듈 인스턴스화
     hw1_logic_circuit uut_hw1_logic_circuit(
-        .A(A),
-        .B(B),
+        .A(A), //테스트벤치의 A 신호를 DUT의 A 포트에 연결 (포트 매핑)
+        .B(B), //위와 동일
         .C(C),
         .Y(Y)
     );
     
-    // 테스트 시나리오
-    initial begin
+    // 테스트 시나리오 정의 
+    initial begin // 초기 블록: 시뮬레이션 시작 시 한 번만 실행되는 블록
         // 모든 입력 조합 테스트
              A = 0; B = 0; C = 0; //초기값 설정 (000)
         #100 A = 0; B = 0; C = 1;  // 100ns 후 입력 변경 (001)

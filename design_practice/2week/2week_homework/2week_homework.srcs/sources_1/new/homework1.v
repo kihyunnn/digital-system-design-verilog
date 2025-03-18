@@ -31,9 +31,9 @@ module hw1_logic_circuit( //인풋 3개와 아웃풋 1개 선언
     wire AB_not_C_not;  // A와 B의 보수와 C의 보수의 AND 결과
     
     // 중간신호 계산
-    assign BC = B & C;
+    assign BC = B & C; //&은 and를 뜻함
     assign AB_not_C_not = A & ~B & ~C;
     
     // 최종 출력 계산
-    assign Y = BC | AB_not_C_not;
+    assign Y = BC | AB_not_C_not; // |은 or을 뜻함
 endmodule

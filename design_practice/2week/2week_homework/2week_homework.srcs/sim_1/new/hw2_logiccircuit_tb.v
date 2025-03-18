@@ -29,17 +29,16 @@ module hw2_logiccircuit_tb;
     
     // 테스트할 모듈 인스턴스화
     hw2_logiccircuit uut_hw2_logiccircuit(
-        .A(A),
-        .B(B),
+        .A(A), //테스트벤치의 A 신호를 DUT의 A 포트에 연결 (포트 매핑)
+        .B(B), //위와 같게 B,C,P,Y진행
         .C(C),
         .P(P),
         .Y(Y)
     );
-    
     // 테스트 시나리오
     initial begin
         // 모든 입력 조합 테스트 (16가지 경우)
-             A = 0; B = 0; C = 0; P = 0;  // 0000
+             A = 0; B = 0; C = 0; P = 0;  // 0000 아래의 값들로 100ns마다 넘어감
         #100 A = 0; B = 0; C = 0; P = 1;  // 0001
         #100 A = 0; B = 0; C = 1; P = 0;  // 0010
         #100 A = 0; B = 0; C = 1; P = 1;  // 0011

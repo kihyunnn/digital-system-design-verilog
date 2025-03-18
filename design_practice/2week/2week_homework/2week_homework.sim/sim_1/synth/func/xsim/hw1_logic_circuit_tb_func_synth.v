@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Sun Mar 16 21:25:18 2025
+// Date        : Wed Mar 19 02:31:34 2025
 // Host        : DESKTOP-ED72SOS running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode funcsim -nolib -force -file
 //               E:/Dev/dev-git/digital-system-design-verilog/design_practice/2week/2week_homework/2week_homework.sim/sim_1/synth/func/xsim/hw1_logic_circuit_tb_func_synth.v
