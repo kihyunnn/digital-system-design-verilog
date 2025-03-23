@@ -8,12 +8,24 @@
 *.log
 *.backup*
 *.tmp
+*.xpr
+*.gen/
+*.ip_user_files/
+*.str
+
+# Implementation results
+*.dcp
+*.rpt
 
 # Simulation Files (ModelSim/QuestaSim)
 transcript
 *.wlf
 *.udo
 *.fdo
+work/
+*.vcd
+*.fsdb
+*.vpd
 
 # OS and Editor Temp Files
 .DS_Store
@@ -25,3 +37,11 @@ Thumbs.db
 
 # Optional: Bitstream files (if you don't want to track them)
 *.bit
+*.bin
+*.mif
+*.mem
+*.hex
+
+# IDE specific files
+.vscode/
+.idea/

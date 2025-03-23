@@ -60,9 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -77,8 +74,8 @@ set rc [catch {
   set_property parent.project_path E:/Dev/dev-git/digital-system-design-verilog/design_practice/2week/2week_homework/2week_homework.xpr [current_project]
   set_property ip_output_repo E:/Dev/dev-git/digital-system-design-verilog/design_practice/2week/2week_homework/2week_homework.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet E:/Dev/dev-git/digital-system-design-verilog/design_practice/2week/2week_homework/2week_homework.runs/synth_1/hw2_logiccircuit.dcp
-  link_design -top hw2_logiccircuit -part xc7z010clg400-1
+  add_files -quiet E:/Dev/dev-git/digital-system-design-verilog/design_practice/2week/2week_homework/2week_homework.runs/synth_1/hw1_logic_circuit.dcp
+  link_design -top hw1_logic_circuit -part xc7z010clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -94,8 +91,8 @@ set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
   opt_design 
-  write_checkpoint -force hw2_logiccircuit_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file hw2_logiccircuit_drc_opted.rpt -pb hw2_logiccircuit_drc_opted.pb -rpx hw2_logiccircuit_drc_opted.rpx"
+  write_checkpoint -force hw1_logic_circuit_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file hw1_logic_circuit_drc_opted.rpt -pb hw1_logic_circuit_drc_opted.pb -rpx hw1_logic_circuit_drc_opted.rpx"
   close_msg_db -file opt_design.pb
 } RESULT]
 if {$rc} {
@@ -114,10 +111,10 @@ set rc [catch {
     implement_debug_core 
   } 
   place_design 
-  write_checkpoint -force hw2_logiccircuit_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file hw2_logiccircuit_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file hw2_logiccircuit_utilization_placed.rpt -pb hw2_logiccircuit_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file hw2_logiccircuit_control_sets_placed.rpt"
+  write_checkpoint -force hw1_logic_circuit_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file hw1_logic_circuit_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file hw1_logic_circuit_utilization_placed.rpt -pb hw1_logic_circuit_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file hw1_logic_circuit_control_sets_placed.rpt"
   close_msg_db -file place_design.pb
 } RESULT]
 if {$rc} {
@@ -133,7 +130,7 @@ set ACTIVE_STEP phys_opt_design
 set rc [catch {
   create_msg_db phys_opt_design.pb
   phys_opt_design 
-  write_checkpoint -force hw2_logiccircuit_physopt.dcp
+  write_checkpoint -force hw1_logic_circuit_physopt.dcp
   close_msg_db -file phys_opt_design.pb
 } RESULT]
 if {$rc} {
@@ -149,19 +146,19 @@ set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
   route_design 
-  write_checkpoint -force hw2_logiccircuit_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file hw2_logiccircuit_drc_routed.rpt -pb hw2_logiccircuit_drc_routed.pb -rpx hw2_logiccircuit_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file hw2_logiccircuit_methodology_drc_routed.rpt -pb hw2_logiccircuit_methodology_drc_routed.pb -rpx hw2_logiccircuit_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file hw2_logiccircuit_power_routed.rpt -pb hw2_logiccircuit_power_summary_routed.pb -rpx hw2_logiccircuit_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file hw2_logiccircuit_route_status.rpt -pb hw2_logiccircuit_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file hw2_logiccircuit_timing_summary_routed.rpt -pb hw2_logiccircuit_timing_summary_routed.pb -rpx hw2_logiccircuit_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file hw2_logiccircuit_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file hw2_logiccircuit_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file hw2_logiccircuit_bus_skew_routed.rpt -pb hw2_logiccircuit_bus_skew_routed.pb -rpx hw2_logiccircuit_bus_skew_routed.rpx"
+  write_checkpoint -force hw1_logic_circuit_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file hw1_logic_circuit_drc_routed.rpt -pb hw1_logic_circuit_drc_routed.pb -rpx hw1_logic_circuit_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file hw1_logic_circuit_methodology_drc_routed.rpt -pb hw1_logic_circuit_methodology_drc_routed.pb -rpx hw1_logic_circuit_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file hw1_logic_circuit_power_routed.rpt -pb hw1_logic_circuit_power_summary_routed.pb -rpx hw1_logic_circuit_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file hw1_logic_circuit_route_status.rpt -pb hw1_logic_circuit_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file hw1_logic_circuit_timing_summary_routed.rpt -pb hw1_logic_circuit_timing_summary_routed.pb -rpx hw1_logic_circuit_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file hw1_logic_circuit_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file hw1_logic_circuit_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file hw1_logic_circuit_bus_skew_routed.rpt -pb hw1_logic_circuit_bus_skew_routed.pb -rpx hw1_logic_circuit_bus_skew_routed.rpx"
   close_msg_db -file route_design.pb
 } RESULT]
 if {$rc} {
-  write_checkpoint -force hw2_logiccircuit_routed_error.dcp
+  write_checkpoint -force hw1_logic_circuit_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
 } else {
