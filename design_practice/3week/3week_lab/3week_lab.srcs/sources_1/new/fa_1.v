@@ -24,7 +24,8 @@ module fa_1(
     input a,
     input b,
     input cin,
-    output sum,
+    output cout,
+    output sum
     );
 
     wire s1, c1, c2;
