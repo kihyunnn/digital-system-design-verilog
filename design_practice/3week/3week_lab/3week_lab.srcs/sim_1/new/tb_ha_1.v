@@ -1,4 +1,3 @@
-
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -9,9 +8,9 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: Testbench for half adder
 // 
-// Dependencies: 
+// Dependencies: ha_1 module
 // 
 // Revision:
 // Revision 0.01 - File Created
@@ -19,17 +18,17 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-`timescale 1ns/1ps
+`timescale 1ns/1ps  // Time unit = 1ns, precision = 1ps
 
-module tb_ha_1;
+module tb_ha_1;  // Half adder testbench
 
-  // 입력
-  reg a, b;
+  // Inputs
+  reg a, b;  // Input bits
 
-  // 출력
-  wire sum, cout;
+  // Outputs
+  wire sum, cout;  // Sum and carry outputs
 
-  // 테스트 대상 모듈 인스턴스화
+  // Connect the half adder module
   ha_1 UUT (
     .a(a),
     .b(b),
@@ -37,30 +36,26 @@ module tb_ha_1;
     .cout(cout)
   );
 
-  // 결과 모니터링
-  initial begin
-    $monitor("Time=%0t a=%b b=%b sum=%b cout=%b", $time, a, b, sum, cout);
-  end
 
-  // 테스트 시나리오
+  // Test all input combinations
   initial begin
-    // 테스트 케이스 1: 0 + 0
+    // Case 1: 0 + 0
     a = 0; b = 0;
-    #100;
+    #100; // Wait for 100 time units
     
-    // 테스트 케이스 2: 0 + 1
+    // Case 2: 0 + 1
     a = 0; b = 1;
     #100;
     
-    // 테스트 케이스 3: 1 + 0
+    // Case 3: 1 + 0
     a = 1; b = 0;
     #100;
     
-    // 테스트 케이스 4: 1 + 1
+    // Case 4: 1 + 1
     a = 1; b = 1;
     #100;
 
-    // 시뮬레이션 종료
+
     $finish;
   end
 

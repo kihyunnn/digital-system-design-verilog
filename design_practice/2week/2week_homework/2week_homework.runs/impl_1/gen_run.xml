@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1742323156">
-  <File Type="BITSTR-BMM" Name="hw2_logiccircuit_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="hw2_logiccircuit_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="hw2_logiccircuit_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="hw2_logiccircuit_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="hw2_logiccircuit.tcl"/>
-  <File Type="OPT-TIMING" Name="hw2_logiccircuit_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="hw2_logiccircuit_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="hw2_logiccircuit_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="hw2_logiccircuit_reports.tcl"/>
-  <File Type="OPT-DRC" Name="hw2_logiccircuit_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="hw2_logiccircuit.hwdef"/>
-  <File Type="PWROPT-DCP" Name="hw2_logiccircuit_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="hw2_logiccircuit_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="hw2_logiccircuit_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="hw2_logiccircuit_placed.dcp"/>
-  <File Type="PLACE-IO" Name="hw2_logiccircuit_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="hw2_logiccircuit_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="hw2_logiccircuit_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="hw2_logiccircuit_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="hw2_logiccircuit_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="hw2_logiccircuit_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="hw2_logiccircuit_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="hw2_logiccircuit_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="hw2_logiccircuit_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="hw2_logiccircuit.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="hw2_logiccircuit_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="hw2_logiccircuit_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="hw2_logiccircuit_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="hw2_logiccircuit.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="hw2_logiccircuit_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="hw2_logiccircuit_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="hw2_logiccircuit_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="hw2_logiccircuit_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="hw2_logiccircuit_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="hw2_logiccircuit_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="hw2_logiccircuit_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="hw2_logiccircuit.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="hw2_logiccircuit_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hw2_logiccircuit_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hw2_logiccircuit_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="hw2_logiccircuit_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="hw2_logiccircuit_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="hw2_logiccircuit_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="hw2_logiccircuit_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="hw2_logiccircuit_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="hw2_logiccircuit_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="hw2_logiccircuit_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="hw2_logiccircuit_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="hw2_logiccircuit_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="hw2_logiccircuit_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="hw2_logiccircuit_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hw2_logiccircuit_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hw2_logiccircuit_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="hw2_logiccircuit_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="hw2_logiccircuit_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="hw2_logiccircuit_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="hw2_logiccircuit_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="hw2_logiccircuit_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="hw2_logiccircuit.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="hw2_logiccircuit_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="hw2_logiccircuit.rbt"/>
-  <File Type="BITSTR-NKY" Name="hw2_logiccircuit.nky"/>
-  <File Type="PDI-FILE" Name="hw2_logiccircuit.pdi"/>
-  <File Type="RCFI_FILE" Name="hw2_logiccircuit.rcfi"/>
-  <File Type="CFI_FILE" Name="hw2_logiccircuit.cfi"/>
-  <File Type="RNPI_FILE" Name="hw2_logiccircuit.rnpi"/>
-  <File Type="NPI_FILE" Name="hw2_logiccircuit.npi"/>
-  <File Type="RBD_FILE" Name="hw2_logiccircuit.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1742327838">
+  <File Type="BITSTR-BMM" Name="hw1_logic_circuit_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="hw1_logic_circuit_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="hw1_logic_circuit_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="hw1_logic_circuit_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="hw1_logic_circuit.tcl"/>
+  <File Type="OPT-TIMING" Name="hw1_logic_circuit_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="hw1_logic_circuit_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="hw1_logic_circuit_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="hw1_logic_circuit_reports.tcl"/>
+  <File Type="OPT-DRC" Name="hw1_logic_circuit_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="hw1_logic_circuit.hwdef"/>
+  <File Type="PWROPT-DCP" Name="hw1_logic_circuit_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="hw1_logic_circuit_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="hw1_logic_circuit_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="hw1_logic_circuit_placed.dcp"/>
+  <File Type="PLACE-IO" Name="hw1_logic_circuit_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="hw1_logic_circuit_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="hw1_logic_circuit_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hw1_logic_circuit_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="hw1_logic_circuit_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="hw1_logic_circuit_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hw1_logic_circuit_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="hw1_logic_circuit_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hw1_logic_circuit_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="hw1_logic_circuit.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="hw1_logic_circuit_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="hw1_logic_circuit_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="hw1_logic_circuit_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="hw1_logic_circuit.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="hw1_logic_circuit_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hw1_logic_circuit_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="hw1_logic_circuit_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hw1_logic_circuit_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="hw1_logic_circuit_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="hw1_logic_circuit_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="hw1_logic_circuit_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="hw1_logic_circuit.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hw1_logic_circuit_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hw1_logic_circuit_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hw1_logic_circuit_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="hw1_logic_circuit_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="hw1_logic_circuit_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="hw1_logic_circuit_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hw1_logic_circuit_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="hw1_logic_circuit_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hw1_logic_circuit_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="hw1_logic_circuit_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="hw1_logic_circuit_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="hw1_logic_circuit_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="hw1_logic_circuit_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="hw1_logic_circuit_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hw1_logic_circuit_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hw1_logic_circuit_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="hw1_logic_circuit_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="hw1_logic_circuit_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="hw1_logic_circuit_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="hw1_logic_circuit_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="hw1_logic_circuit_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="hw1_logic_circuit.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="hw1_logic_circuit_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="hw1_logic_circuit.rbt"/>
+  <File Type="BITSTR-NKY" Name="hw1_logic_circuit.nky"/>
+  <File Type="PDI-FILE" Name="hw1_logic_circuit.pdi"/>
+  <File Type="RCFI_FILE" Name="hw1_logic_circuit.rcfi"/>
+  <File Type="CFI_FILE" Name="hw1_logic_circuit.cfi"/>
+  <File Type="RNPI_FILE" Name="hw1_logic_circuit.rnpi"/>
+  <File Type="NPI_FILE" Name="hw1_logic_circuit.npi"/>
+  <File Type="RBD_FILE" Name="hw1_logic_circuit.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="hw2_logiccircuit.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="hw2_logiccircuit.sysdef"/>
-  <File Type="BG-BGN" Name="hw2_logiccircuit.bgn"/>
-  <File Type="BG-DRC" Name="hw2_logiccircuit.drc"/>
-  <File Type="RDI-RDI" Name="hw2_logiccircuit.vdi"/>
+  <File Type="BITSTR-LTX" Name="hw1_logic_circuit.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="hw1_logic_circuit.sysdef"/>
+  <File Type="BG-BGN" Name="hw1_logic_circuit.bgn"/>
+  <File Type="BG-DRC" Name="hw1_logic_circuit.drc"/>
+  <File Type="RDI-RDI" Name="hw1_logic_circuit.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/hw2_logiccircuit.v">
+    <File Path="$PSRCDIR/sources_1/new/homework1.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/homework1.v">
+    <File Path="$PSRCDIR/sources_1/new/hw2_logiccircuit.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -94,7 +94,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="hw2_logiccircuit"/>
+      <Option Name="TopModule" Val="hw1_logic_circuit"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
