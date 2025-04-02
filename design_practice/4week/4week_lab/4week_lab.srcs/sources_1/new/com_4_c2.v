@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2025/04/01 22:10:52
+// Create Date: 2025/04/02 01:06:01
 // Design Name: 
-// Module Name: mux_4to1
+// Module Name: com_4_c2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,19 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mux_4to1(
-    input       a,
-    input       b,
-    input       c,
-    input       d,
-    input [1:0] sel,
-    output      out
+module com_4_c2(
 
     );
-
-    assign out = (sel == 2'b00) ? a :
-                (sel == 2'b01) ? b :
-                (sel == 2'b10) ? c :
-                (sel == 2'b11) ? d : 1'b0;
-
 endmodule
