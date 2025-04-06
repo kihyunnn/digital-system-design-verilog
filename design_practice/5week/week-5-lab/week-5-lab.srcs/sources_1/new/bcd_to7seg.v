@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2025/03/23 20:48:59
+// Create Date: 2025/04/02 09:10:57
 // Design Name: 
-// Module Name: fa_1
+// Module Name: bcd_to7seg
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,28 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fa_1(
-    input a,
-    input b,
-    input cin,
-    output cout,
-    output sum
-    );
+module bcd_to7seg(
 
-    wire s1, c1, c2;
-
-
-    ha_1 u0(
-        .a(a),
-        .b(b),
-        .sum(s1),
-        .cout(c1)
     );
-    ha_1 u1(
-        .a(s1),
-        .b(cin),
-        .sum(sum),
-        .cout(c2)
-    );
-    assign cout = c1 | c2;
 endmodule
