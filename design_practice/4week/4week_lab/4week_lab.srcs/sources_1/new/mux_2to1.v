@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2025/03/23 20:48:59
+// Create Date: 2025/04/01 23:48:27
 // Design Name: 
-// Module Name: fa_1
+// Module Name: mux_2to1
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,33 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fa_1(
+module mux_2to1(
     input a,
     input b,
-    input cin,
-    output cout,
-<<<<<<< HEAD
-
-    );
-=======
-    output sum
-    );
-
-    wire s1, c1, c2;
-
-
-    ha_1 u0(
-        .a(a),
-        .b(b),
-        .sum(s1),
-        .cout(c1)
-    );
-    ha_1 u1(
-        .a(s1),
-        .b(cin),
-        .sum(sum),
-        .cout(c2)
-    );
-    assign cout = c1 | c2;
->>>>>>> 1023a036dc2941b80327ff73a580411c2628a325
+    input sel,
+    output out
+);
+    assign out = (sel == 1'b0) ? a : b;
 endmodule

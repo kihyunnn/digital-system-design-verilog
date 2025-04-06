@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2025/03/23 20:48:59
+// Create Date: 2025/04/02 01:05:26
 // Design Name: 
-// Module Name: fa_1
+// Module Name: comp_1
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,33 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fa_1(
+module comp_1(
     input a,
     input b,
-    input cin,
-    output cout,
-<<<<<<< HEAD
-
-    );
-=======
-    output sum
+    output a_big,
+    output b_big,
+    output equal
     );
 
-    wire s1, c1, c2;
 
-
-    ha_1 u0(
-        .a(a),
-        .b(b),
-        .sum(s1),
-        .cout(c1)
-    );
-    ha_1 u1(
-        .a(s1),
-        .b(cin),
-        .sum(sum),
-        .cout(c2)
-    );
-    assign cout = c1 | c2;
->>>>>>> 1023a036dc2941b80327ff73a580411c2628a325
+    assign equal = ~(a ^ b);
+    assign a_big = (a & ~b);
+    assign b_big = (~a & b);
 endmodule
