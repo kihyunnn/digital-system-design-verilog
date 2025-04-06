@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"tb_rca_16_func_synth.v" \
+"../../../../../3week_lab.srcs/sim_1/new/tb_rca_16.v" \
+
+# Do not sort compile order
+nosort

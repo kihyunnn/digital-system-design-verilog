@@ -1,0 +1,16 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sim_1/new/tb_comp_2.v,1743525462,verilog,,,,tb_comp_2,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sim_1/new/tb_comp_4_c1.v,1743527593,verilog,,,,tb_comp_4_c1,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sim_1/new/tb_comp_4_c2.v,1743528165,verilog,,,,tb_comp_4_c2,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sim_1/new/tb_mux_16to1_c1.v,1743518759,verilog,,,,tb_mux_16to1_c1,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sim_1/new/tb_mux_4to1.v,1743513426,verilog,,,,tb_mux_4to1,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sources_1/new/comp_1.v,1743525308,verilog,,E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sources_1/new/comp_2.v,,comp_1,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sources_1/new/comp_2.v,1743525697,verilog,,E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sources_1/new/comp_4_c1.v,,comp_2,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sources_1/new/comp_4_c1.v,1743526775,verilog,,E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sim_1/new/tb_comp_4_c1.v,,comp_4_c1,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sources_1/new/comp_4_c2.v,1743527118,verilog,,E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sim_1/new/tb_comp_4_c2.v,,comp_4_c2,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sources_1/new/mux_16to1_c1.v,1743518543,verilog,,E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sources_1/new/mux_4to1.v,,mux_16to1_c1,,,,,,,,
+E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sources_1/new/mux_4to1.v,1743513149,verilog,,E:/Dev/dev-git/digital-system-design-verilog/design_practice/4week/4week_lab/4week_lab.srcs/sim_1/new/tb_mux_16to1_c1.v,,mux_4to1,,,,,,,,
