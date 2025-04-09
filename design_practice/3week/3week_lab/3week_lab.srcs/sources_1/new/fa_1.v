@@ -25,10 +25,6 @@ module fa_1(
     input b,
     input cin,
     output cout,
-<<<<<<< HEAD
-
-    );
-=======
     output sum
     );
 
@@ -48,5 +44,4 @@ module fa_1(
         .cout(c2)
     );
     assign cout = c1 | c2;
->>>>>>> 1023a036dc2941b80327ff73a580411c2628a325
 endmodule
