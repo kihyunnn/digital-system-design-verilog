@@ -1,33 +1,8 @@
-# Vivado Project Files
-.ip_user_files/
-.sim/
-.hw/
-.runs/
+# Vivado 임시 및 자동 생성 파일 (충돌 가능성 높음)
 .cache/
 *.jou
 *.log
-*.backup*
-*.tmp
-*.xpr
-*.gen/
-*.ip_user_files/
-*.str
-
-# Implementation results
-*.dcp
-*.rpt
-
-# Simulation Files (ModelSim/QuestaSim)
-transcript
-*.wlf
-*.udo
-*.fdo
-work/
-*.vcd
-*.fsdb
-*.vpd
-
-# OS and Editor Temp Files
+# OS 및 에디터 임시 파일
 .DS_Store
 Thumbs.db
 *.swp
@@ -35,13 +10,24 @@ Thumbs.db
 *~
 *.bak
 
-# Optional: Bitstream files (if you don't want to track them)
+# 대용량 파일이나 동적으로 생성되는 파일
+# 필요할 경우 이 항목들은 주석 처리하세요
 *.bit
 *.bin
-*.mif
-*.mem
-*.hex
 
-# IDE specific files
-.vscode/
-.idea/
+# IDE 설정 파일 (충돌 가능성 있음)
+.vscode/settings.json
+.idea/workspace.xml
+.idea/tasks.xml
+
+# 필요에 따라 주석 해제하여 추가로 제외할 파일
+# .runs/
+# .sim/
+# .hw/
+# *.dcp
+# *.rpt 
+# transcript
+# work/
+# *.vcd
+# *.fsdb
+# *.vpd
