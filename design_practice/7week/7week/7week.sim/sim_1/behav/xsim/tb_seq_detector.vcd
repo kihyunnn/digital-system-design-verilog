@@ -1,0 +1,218 @@
+$date
+   Tue Apr 22 20:49:52 2025
+$end
+$version
+  2019.2
+$end
+$timescale
+  1ps
+$end
+$scope module tb_seq_detector $end
+$var reg 1 ! clk $end
+$var reg 1 " rstn $end
+$var reg 1 # w100 $end
+$var reg 1 $ btn $end
+$var wire 1 % sale $end
+$var wire 1 & ret $end
+$scope module UUT $end
+$var wire 1 ' clk $end
+$var wire 1 ( rstn $end
+$var wire 1 ) w100 $end
+$var wire 1 * btn $end
+$var reg 1 + sale $end
+$var reg 1 , ret $end
+$var reg 2 - cst [1:0] $end
+$var reg 2 . nst [1:0] $end
+$var reg 1 / sale_nxt $end
+$var reg 1 0 ret_nxt $end
+$var parameter 2 1 S0 [1:0] $end
+$var parameter 2 2 S100 [1:0] $end
+$var parameter 2 3 S200 [1:0] $end
+$var parameter 2 4 S300 [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+b0 -
+b0 .
+0/
+00
+b0 1
+b1 2
+b10 3
+b11 4
+$end
+#5000
+1!
+1'
+#10000
+0!
+0'
+#12000
+1"
+1(
+#15000
+1!
+1'
+#18000
+1#
+1)
+b1 .
+#20000
+0!
+0'
+#25000
+1!
+1'
+b1 -
+b10 .
+#27000
+0#
+0)
+b1 .
+#30000
+0!
+0'
+#35000
+1!
+1'
+#40000
+0!
+0'
+#45000
+1!
+1#
+1'
+1)
+b10 -
+b11 .
+#50000
+0!
+0'
+#54000
+0#
+0)
+b10 .
+#55000
+1!
+1'
+#60000
+0!
+0'
+#65000
+1!
+1'
+#70000
+0!
+0'
+#72000
+1#
+1$
+1)
+1*
+b11 .
+#75000
+1!
+1'
+b11 -
+10
+#80000
+0!
+0'
+#81000
+0#
+0$
+0)
+0*
+00
+#85000
+1!
+1'
+#90000
+0!
+0'
+#95000
+1!
+1'
+#99000
+1#
+1)
+10
+#100000
+0!
+0'
+#105000
+1!
+1&
+1'
+1,
+#108000
+0#
+0)
+00
+#110000
+0!
+0'
+#115000
+1!
+0&
+1'
+0,
+#120000
+0!
+0'
+#125000
+1!
+1'
+#126000
+1$
+1*
+b0 .
+1/
+#130000
+0!
+0'
+#135000
+1!
+0$
+1'
+0*
+b11 .
+0/
+#140000
+0!
+0'
+#145000
+1!
+1'
+#150000
+0!
+0'
+#155000
+1!
+1'
+#160000
+0!
+0'
+#165000
+1!
+1'
+#170000
+0!
+0'
+#175000
+1!
+1'
