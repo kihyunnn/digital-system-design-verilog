@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../midterm.srcs/sources_1/new/BCLL4.v" \
+"../../../../midterm.srcs/sources_1/new/CLA16.v" \
+"../../../../midterm.srcs/sources_1/new/CLA4.v" \
+"../../../../midterm.srcs/sources_1/new/CLL4.v" \
+"../../../../midterm.srcs/sources_1/new/GPFFA.v" \
+"../../../../midterm.srcs/sources_1/new/bcd_converter_16_to_20.v" \
+"../../../../midterm.srcs/sources_1/new/csa_multiplier_8x8.v" \
+"../../../../midterm.srcs/sources_1/new/full_adder.v" \
+"../../../../midterm.srcs/sources_1/new/half_adder.v" \
+"../../../../midterm.srcs/sources_1/new/problem1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -24,6 +24,11 @@
 // 8x8 Carry Save Multiplier (CSM) 모듈 - generate 문 사용 (수정 버전)
 // 8비트 입력 A와 B를 곱하여 16비트 결과 Z를 생성합니다.
 // Carry Save Adder Tree는 generate 문으로 구현하고, 최종 덧셈은 CLA16을 사용합니다.
+// csa_multiplier_8x8_mod.v (모듈 이름은 내부에서 csa_multiplier_8x8로 사용)
+// 8x8 Carry Save Multiplier (CSM) 모듈 - generate 문 사용 (수정 버전)
+// 8비트 입력 A와 B를 곱하여 16비트 결과 Z를 생성합니다.
+// Carry Save Adder Tree는 generate 문으로 구현하고, 최종 덧셈은 CLA16을 사용합니다.
+// *** LSB 처리 방식 수정됨 ***
 module csa_multiplier_8x8(
     input [7:0] A,      // 8비트 피승수 입력
     input [7:0] B,      // 8비트 승수 입력
@@ -57,11 +62,12 @@ module csa_multiplier_8x8(
 
     // Stage 0: 첫 번째 부분곱 행(pp[0])과 두 번째 부분곱 행(pp[1], 1비트 왼쪽 시프트)을 더합니다.
     //          이는 Half Adder를 사용하는 것과 동일한 효과입니다.
-    assign s_csa[0][0] = pp[0][0]; // 최하위 비트(Z[0])는 p[0][0]과 동일
+    // assign s_csa[0][0] = pp[0][0]; // <<< 수정: Z[0]은 최종 단계에서 처리, 여기서 Sum[0]은 계산 안 함
     assign c_csa[0][0] = 1'b0;    // 컬럼 0으로 들어오는 캐리는 없음
 
     genvar k0;
     generate
+        // <<< 수정: k0=0 루프 제거, 1부터 시작
         for (k0 = 1; k0 < 15; k0 = k0 + 1) begin : csa_stage0
             // k0 위치의 합계를 계산하기 위한 입력 비트들: pp[0][k0], pp[1][k0-1]
             wire p0_bit = (k0 < 8) ? pp[0][k0] : 1'b0; // pp[0] 행의 비트 (범위 체크)
@@ -77,6 +83,7 @@ module csa_multiplier_8x8(
         // Stage 0의 사용되지 않는 최상위 비트들은 0으로 설정
         assign s_csa[0][15] = 1'b0;
         assign c_csa[0][15] = 1'b0;
+        assign s_csa[0][0] = 1'b0; // <<< 추가: 사용하지 않는 s_csa[0][0] 명시적 0 할당 (필수는 아님)
     endgenerate
 
     // Stages 1 to 6: 이전 단계의 Sum, 이전 단계의 Carry(시프트됨), 다음 부분곱 행(시프트됨)을 더합니다.
@@ -84,7 +91,7 @@ module csa_multiplier_8x8(
     genvar stage, k_fa;
     generate
         for (stage = 1; stage < 7; stage = stage + 1) begin : csa_reduction_stages
-            // 각 단계의 컬럼 0은 계산할 필요 없음 (결과는 항상 0)
+            // <<< 수정: 컬럼 0 계산 제거
             assign s_csa[stage][0] = 1'b0;
             assign c_csa[stage][0] = 1'b0;
 
@@ -111,7 +118,9 @@ module csa_multiplier_8x8(
 
     // --- CSA Tree 최종 결과 정리 ---
     // 마지막 6단계의 출력이 최종 Sum 벡터와 Carry 벡터가 됩니다.
-    wire [15:0] final_sum   = s_csa[6];
+    // <<< 수정: final_sum 생성 방식 변경 >>>
+    // 최종 Sum 벡터의 비트 1~15는 마지막 단계 Sum (s_csa[6][15:1])이고, 비트 0은 pp[0][0]입니다.
+    wire [15:0] final_sum   = {s_csa[6][15:1], pp[0][0]};
     // 최종 Carry 벡터는 마지막 단계 캐리를 한 비트 왼쪽으로 시프트한 것과 같습니다.
     wire [15:0] final_carry = {c_csa[6][14:0], 1'b0};
 
@@ -121,7 +130,7 @@ module csa_multiplier_8x8(
 
     // CLA16 가산기 모듈 인스턴스화
     CLA16 final_adder_unit (
-        .A(final_sum),      // 입력 A: CSA Tree 최종 Sum 벡터
+        .A(final_sum),      // 입력 A: CSA Tree 최종 Sum 벡터 (LSB는 pp[0][0])
         .B(final_carry),    // 입력 B: CSA Tree 최종 Carry 벡터 (시프트됨)
         .Cin(1'b0),         // 캐리 입력은 0
         .Sum(Z),            // 최종 합계 출력을 모듈 출력 Z에 연결
