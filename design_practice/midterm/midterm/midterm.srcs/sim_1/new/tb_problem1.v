@@ -42,7 +42,6 @@ module tb_problem1;
 
     // --- 테스트 시나리오 ---
     initial begin
-        $display("--- problem1_logic Test Started ---");
         $display("Time | X1 Y1 X2 Y2 | A(Hex) B(Hex) C(Hex) | D(BCD Hex)");
         $display("----------------------------------------------------------");
 
@@ -83,7 +82,6 @@ module tb_problem1;
 
 
         $display("----------------------------------------------------------");
-        $display("--- problem1_logic Test Finished ---");
         $finish;
     end
 

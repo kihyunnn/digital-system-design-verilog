@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/kihyunPC/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-20692-DESKTOP-ED72SOS/incrSyn
+set_param chipscope.maxJobs 3
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
@@ -38,9 +38,11 @@ read_verilog -library xil_defaultlib {
   E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/midterm/midterm.srcs/sources_1/new/CLA4.v
   E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/midterm/midterm.srcs/sources_1/new/CLL4.v
   E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/midterm/midterm.srcs/sources_1/new/GPFFA.v
+  E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/midterm/midterm.srcs/sources_1/new/bcd_converter_16_to_20.v
+  E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/midterm/midterm.srcs/sources_1/new/csa_multiplier_8x8.v
   E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/midterm/midterm.srcs/sources_1/new/full_adder.v
   E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/midterm/midterm.srcs/sources_1/new/half_adder.v
-  E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/midterm/midterm.srcs/sources_1/new/csa_multiplier_8x8.v
+  E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/midterm/midterm.srcs/sources_1/new/problem1.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -53,12 +55,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top csa_multiplier_8x8 -part xc7z010clg400-1
+synth_design -top problem1 -part xc7z010clg400-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef csa_multiplier_8x8.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file csa_multiplier_8x8_utilization_synth.rpt -pb csa_multiplier_8x8_utilization_synth.pb"
+write_checkpoint -force -noxdef problem1.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file problem1_utilization_synth.rpt -pb problem1_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

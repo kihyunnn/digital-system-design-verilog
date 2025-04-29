@@ -19,20 +19,17 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-// Carry Lookahead Logic for 4-bit block (CLL4) 모듈
-// 슬라이드 19 상단 우측 코드 기반입니다.
-// 4비트 블록 내부의 캐리 신호와 블록 레벨 P/G/Cout을 계산합니다.
+
 module CLL4(
-    input [3:0] Gin,    // 4비트 블록의 각 비트에서 온 캐리 생성(Generate) 신호 [G3, G2, G1, G0]
-    input [3:0] Pin,    // 4비트 블록의 각 비트에서 온 캐리 전파(Propagate) 신호 [P3, P2, P1, P0]
-    input Cin,          // 4비트 블록으로 들어오는 캐리 입력 (Ci0)
-    output Cout,        // 4비트 블록에서 나가는 캐리 출력 (C4)
-    output [3:1] C,     // 4비트 블록 내부 캐리 신호 출력 [C3, C2, C1] (Ci1, Ci2, Ci3)
-    output Pout,        // 4비트 블록의 그룹 전파(Propagate) 신호 출력
-    output Gout         // 4비트 블록의 그룹 생성(Generate) 신호 출력
+    input [3:0] Gin,    // 4비트 Generate
+    input [3:0] Pin,    // 4비트 Propagate
+    input Cin,          // 4비트 캐리 입력 Ci0
+    output Cout,        // 4비트에서 나가는 캐리 출력 (4
+    output [3:1] C,     // 4비트 블록 내부 캐리 신호 [C3, C2, C1] (Ci1, Ci2, Ci3)
+    output Pout,        // 4비트 블록의 그룹 propagate 출력
+    output Gout         // 4비트 블록의 그룹 Generate 출력
 );
 
-    // 4비트 블록 내부 캐리 신호 C[1], C[2], C[3] 계산
     // C[1]: 비트 1로 들어가는 캐리 = G0에서 생성되거나 P0를 통해 Cin이 전파될 때
     assign C[1] = Gin[0] | (Pin[0] & Cin);
     // C[2]: 비트 2로 들어가는 캐리 = G1에서 생성되거나 P1을 통해 C1이 전파될 때 (C1은 위에서 계산)

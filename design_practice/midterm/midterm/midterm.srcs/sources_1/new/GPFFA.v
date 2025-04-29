@@ -21,7 +21,6 @@
 
 
 // Generate-Propagate Full Adder (GPFFA) 모듈 - 1비트 전가산기 및 G/P 계산
-// 슬라이드 19 상단 좌측 코드 기반입니다.
 module GPFFA(
     input A,     // 1비트 A 입력
     input B,     // 1비트 B 입력
@@ -38,7 +37,6 @@ module GPFFA(
     assign P = A ^ B;
 
     // 합계(Sum) 계산: P와 Cin의 XOR
-    // (A^B)^Cin = A^B^Cin (일반적인 전가산기 Sum 공식)
     assign Sum = P ^ Cin;
 
 endmodule
