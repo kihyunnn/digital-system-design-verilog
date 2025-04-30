@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"tb_booth_mul_top_time_synth.v" \
+"../../../../../problem3.srcs/sim_1/new/tb_booth_mul_top.v" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../problem3.srcs/sources_1/new/booth_block.v" \
+"../../../../problem3.srcs/sources_1/new/booth_encoder_logic.v" \
+"../../../../problem3.srcs/sources_1/new/booth_mul_top.v" \
+"../../../../problem3.srcs/sources_1/new/booth_selector_logic.v" \
+"../../../../problem3.srcs/sources_1/new/cla.v" \
+"../../../../problem3.srcs/sources_1/new/radix4_booth_multiplier.v" \
+"../../../../problem3.srcs/sim_1/new/tb_booth_mul_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,505 @@
+$date
+   Wed Apr 30 03:34:12 2025
+$end
+$version
+  2019.2
+$end
+$timescale
+  1ps
+$end
+$scope module tb_booth_mul_top $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # start $end
+$var reg 8 $ A [7:0] $end
+$var reg 8 % B [7:0] $end
+$var wire 16 & P [15:0] $end
+$var wire 1 ' done $end
+$scope module dut $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * start $end
+$var wire 8 + Mcand [7:0] $end
+$var wire 8 , Mplier [7:0] $end
+$var reg 16 - Product [15:0] $end
+$var reg 1 . done $end
+$var wire 16 / P [15:0] $end
+$var reg 2 0 state [1:0] $end
+$var reg 2 1 n_state [1:0] $end
+$var reg 3 2 cyc_cnt [2:0] $end
+$var parameter 2 3 IDLE [1:0] $end
+$var parameter 2 4 LOAD [1:0] $end
+$var parameter 2 5 WAIT_CALC [1:0] $end
+$var parameter 2 6 DONE [1:0] $end
+$scope module u_datapath $end
+$var wire 8 + A [7:0] $end
+$var wire 8 , B [7:0] $end
+$var wire 16 / P [15:0] $end
+$var wire 9 7 extB [8:0] $end
+$var wire 16 8 s0 [15:0] $end
+$var wire 16 9 s1 [15:0] $end
+$var wire 16 : s2 [15:0] $end
+$var wire 16 ; s3 [15:0] $end
+$var wire 16 < t1 [15:0] $end
+$var wire 16 = t2 [15:0] $end
+$var parameter 32 > N [31:0] $end
+$var parameter 0 ? SBITS $end
+$scope module BLOCK[0].u_bb $end
+$var wire 3 @ bits [2:0] $end
+$var wire 8 + multiplicand [7:0] $end
+$var wire 9 A partial_product [8:0] $end
+$var wire 1 B single $end
+$var wire 1 C double $end
+$var wire 1 D neg $end
+$var parameter 32 E N [31:0] $end
+$scope module enc $end
+$var wire 1 F x2i_minus1 $end
+$var wire 1 G x2i $end
+$var wire 1 H x2i_plus1 $end
+$var wire 1 B single $end
+$var wire 1 C double $end
+$var wire 1 D neg $end
+$upscope $end
+$scope module sel $end
+$var wire 8 + multiplicand [7:0] $end
+$var wire 1 B single $end
+$var wire 1 C double $end
+$var wire 1 D neg $end
+$var reg 9 I partial_product [8:0] $end
+$var reg 9 J temp [8:0] $end
+$var parameter 32 K N [31:0] $end
+$upscope $end
+$upscope $end
+$scope module BLOCK[1].u_bb $end
+$var wire 3 L bits [2:0] $end
+$var wire 8 + multiplicand [7:0] $end
+$var wire 9 M partial_product [8:0] $end
+$var wire 1 N single $end
+$var wire 1 O double $end
+$var wire 1 P neg $end
+$var parameter 32 Q N [31:0] $end
+$scope module enc $end
+$var wire 1 H x2i_minus1 $end
+$var wire 1 R x2i $end
+$var wire 1 S x2i_plus1 $end
+$var wire 1 N single $end
+$var wire 1 O double $end
+$var wire 1 P neg $end
+$upscope $end
+$scope module sel $end
+$var wire 8 + multiplicand [7:0] $end
+$var wire 1 N single $end
+$var wire 1 O double $end
+$var wire 1 P neg $end
+$var reg 9 T partial_product [8:0] $end
+$var reg 9 U temp [8:0] $end
+$var parameter 32 V N [31:0] $end
+$upscope $end
+$upscope $end
+$scope module BLOCK[2].u_bb $end
+$var wire 3 W bits [2:0] $end
+$var wire 8 + multiplicand [7:0] $end
+$var wire 9 X partial_product [8:0] $end
+$var wire 1 Y single $end
+$var wire 1 Z double $end
+$var wire 1 [ neg $end
+$var parameter 32 \ N [31:0] $end
+$scope module enc $end
+$var wire 1 S x2i_minus1 $end
+$var wire 1 ] x2i $end
+$var wire 1 ^ x2i_plus1 $end
+$var wire 1 Y single $end
+$var wire 1 Z double $end
+$var wire 1 [ neg $end
+$upscope $end
+$scope module sel $end
+$var wire 8 + multiplicand [7:0] $end
+$var wire 1 Y single $end
+$var wire 1 Z double $end
+$var wire 1 [ neg $end
+$var reg 9 _ partial_product [8:0] $end
+$var reg 9 ` temp [8:0] $end
+$var parameter 32 a N [31:0] $end
+$upscope $end
+$upscope $end
+$scope module BLOCK[3].u_bb $end
+$var wire 3 b bits [2:0] $end
+$var wire 8 + multiplicand [7:0] $end
+$var wire 9 c partial_product [8:0] $end
+$var wire 1 d single $end
+$var wire 1 e double $end
+$var wire 1 f neg $end
+$var parameter 32 g N [31:0] $end
+$scope module enc $end
+$var wire 1 ^ x2i_minus1 $end
+$var wire 1 h x2i $end
+$var wire 1 i x2i_plus1 $end
+$var wire 1 d single $end
+$var wire 1 e double $end
+$var wire 1 f neg $end
+$upscope $end
+$scope module sel $end
+$var wire 8 + multiplicand [7:0] $end
+$var wire 1 d single $end
+$var wire 1 e double $end
+$var wire 1 f neg $end
+$var reg 9 j partial_product [8:0] $end
+$var reg 9 k temp [8:0] $end
+$var parameter 32 l N [31:0] $end
+$upscope $end
+$upscope $end
+$scope module add1 $end
+$var wire 16 8 A [15:0] $end
+$var wire 16 9 B [15:0] $end
+$var wire 16 < SUM [15:0] $end
+$var parameter 32 m N [31:0] $end
+$upscope $end
+$scope module add2 $end
+$var wire 16 : A [15:0] $end
+$var wire 16 ; B [15:0] $end
+$var wire 16 = SUM [15:0] $end
+$var parameter 32 n N [31:0] $end
+$upscope $end
+$scope module add3 $end
+$var wire 16 < A [15:0] $end
+$var wire 16 = B [15:0] $end
+$var wire 16 / SUM [15:0] $end
+$var parameter 32 o N [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+b0 $
+b0 %
+b0 &
+0'
+0(
+1)
+0*
+b0 +
+b0 ,
+b0 -
+0.
+b0 /
+b0 0
+b0 1
+b0 2
+b0 3
+b1 4
+b10 5
+b11 6
+b0 7
+b0 8
+b0 9
+b0 :
+b0 ;
+b0 <
+b0 =
+b1000 >
+b111 ?
+b0 @
+b0 A
+0B
+0C
+0D
+b1000 E
+0F
+0G
+0H
+b0 I
+b0 J
+b1000 K
+b0 L
+b0 M
+0N
+0O
+0P
+b1000 Q
+0R
+0S
+b0 T
+b0 U
+b1000 V
+b0 W
+b0 X
+0Y
+0Z
+0[
+b1000 \
+0]
+0^
+b0 _
+b0 `
+b1000 a
+b0 b
+b0 c
+0d
+0e
+0f
+b1000 g
+0h
+0i
+b0 j
+b0 k
+b1000 l
+b10000 m
+b10000 n
+b10000 o
+$end
+#5000
+1!
+1(
+#10000
+0!
+0(
+#15000
+1!
+0"
+1(
+0)
+#20000
+0!
+1#
+b1100110 $
+b110011 %
+0(
+1*
+b1100110 +
+b110011 ,
+b1010001010010 /
+b1 1
+b1100110 7
+b1111111110011010 8
+b110011000 9
+b1111100110100000 :
+b1100110000000 ;
+b100110010 <
+b1001100100000 =
+b110 @
+b110011010 A
+1B
+0C
+1D
+0F
+1G
+1H
+b110011010 I
+b1100110 J
+b1 L
+b1100110 M
+1N
+0O
+0R
+0S
+b1100110 T
+b1100110 U
+b110 W
+b110011010 X
+1Y
+0Z
+1[
+1]
+1^
+b110011010 _
+b1100110 `
+b1 b
+b1100110 c
+1d
+0e
+0h
+0i
+b1100110 j
+b1100110 k
+#25000
+1!
+1(
+b1 0
+b10 1
+#30000
+0!
+0#
+0(
+0*
+#35000
+1!
+1(
+b10 0
+b11 2
+#40000
+0!
+0(
+#45000
+1!
+1(
+b10 2
+#50000
+0!
+0(
+#55000
+1!
+1(
+b1 2
+#60000
+0!
+0(
+#65000
+1!
+1(
+b11 1
+b0 2
+#70000
+0!
+0(
+#75000
+1!
+1(
+b11 0
+b0 1
+b111 2
+#80000
+0!
+0(
+#85000
+1!
+b1010001010010 &
+1'
+1(
+b1010001010010 -
+1.
+b0 0
+#90000
+0!
+0(
+#95000
+1!
+0'
+1(
+0.
+#100000
+0!
+1#
+b10100110 $
+b1100110 %
+0(
+1*
+b10100110 +
+b1100110 ,
+b1101110000100100 /
+b1 1
+b11001100 7
+b10110100 8
+b1111110100110000 9
+b101101000000 :
+b1101001100000000 ;
+b1111110111100100 <
+b1101111001000000 =
+b100 @
+b10110100 A
+0B
+1C
+0F
+0G
+1H
+b10110100 I
+b101001100 J
+b11 L
+b101001100 M
+0N
+1O
+1R
+0S
+b101001100 T
+b101001100 U
+b100 W
+b10110100 X
+0Y
+1Z
+0]
+1^
+b10110100 _
+b101001100 `
+b11 b
+b101001100 c
+0d
+1e
+1h
+0i
+b101001100 j
+b101001100 k
+#105000
+1!
+1(
+b1 0
+b10 1
+#110000
+0!
+0#
+0(
+0*
+#115000
+1!
+1(
+b10 0
+b11 2
+#120000
+0!
+0(
+#125000
+1!
+1(
+b10 2
+#130000
+0!
+0(
+#135000
+1!
+1(
+b1 2
+#140000
+0!
+0(
+#145000
+1!
+1(
+b11 1
+b0 2
+#150000
+0!
+0(
+#155000
+1!
+1(
+b11 0
+b0 1
+b111 2
+#160000
+0!
+0(
+#165000
+1!
+b1101110000100100 &
+1'
+1(
+b1101110000100100 -
+1.
+b0 0
+#170000
+0!
+0(
+#175000
+1!
+0'
+1(
+0.
+#180000
+0!
+0(
+#185000
+1!
+1(

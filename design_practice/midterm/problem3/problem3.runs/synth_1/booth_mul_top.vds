@@ -1,0 +1,303 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Apr 30 03:51:44 2025
+# Process ID: 27100
+# Current directory: E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.runs/synth_1
+# Command line: vivado.exe -log booth_mul_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source booth_mul_top.tcl
+# Log file: E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.runs/synth_1/booth_mul_top.vds
+# Journal file: E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source booth_mul_top.tcl -notrace
+Command: synth_design -top booth_mul_top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25064 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 561.770 ; gain = 242.016
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'booth_mul_top' [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/booth_mul_top.v:2]
+	Parameter IDLE bound to: 2'b00 
+	Parameter LOAD bound to: 2'b01 
+	Parameter WAIT_CALC bound to: 2'b10 
+	Parameter DONE bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'radix4_booth_multiplier' [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/radix4_booth_multiplier.v:31]
+	Parameter N bound to: 8 - type: integer 
+	Parameter SBITS bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'booth_block' [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/booth_block.v:23]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'booth_encoder_logic' [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/booth_encoder_logic.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'booth_encoder_logic' (1#1) [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/booth_encoder_logic.v:22]
+INFO: [Synth 8-6157] synthesizing module 'booth_selector_logic' [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/booth_selector_logic.v:20]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'booth_selector_logic' (2#1) [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/booth_selector_logic.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'booth_block' (3#1) [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/booth_block.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cla' [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/cla.v:24]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cla' (4#1) [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/cla.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'radix4_booth_multiplier' (5#1) [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/radix4_booth_multiplier.v:31]
+INFO: [Synth 8-226] default block is never used [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/booth_mul_top.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'booth_mul_top' (6#1) [E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.srcs/sources_1/new/booth_mul_top.v:2]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 634.336 ; gain = 314.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 634.336 ; gain = 314.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 634.336 ; gain = 314.582
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'booth_mul_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                    LOAD |                               01 |                               01
+               WAIT_CALC |                               10 |                               10
+                    DONE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'booth_mul_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 634.336 ; gain = 314.582
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 12    
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module booth_mul_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+Module cla 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module booth_encoder_logic 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module booth_selector_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 786.504 ; gain = 466.750
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 790.898 ; gain = 471.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 790.898 ; gain = 471.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 791.891 ; gain = 472.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 791.891 ; gain = 472.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 791.891 ; gain = 472.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 791.891 ; gain = 472.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 791.891 ; gain = 472.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 791.891 ; gain = 472.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     9|
+|3     |LUT2   |    22|
+|4     |LUT3   |     3|
+|5     |LUT4   |     6|
+|6     |LUT5   |     9|
+|7     |LUT6   |    35|
+|8     |FDCE   |    22|
+|9     |IBUF   |    19|
+|10    |OBUF   |    17|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------+------------------------+------+
+|      |Instance     |Module                  |Cells |
++------+-------------+------------------------+------+
+|1     |top          |                        |   143|
+|2     |  u_datapath |radix4_booth_multiplier |    76|
+|3     |    add3     |cla                     |    76|
++------+-------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 791.891 ; gain = 472.137
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 791.891 ; gain = 472.137
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 791.891 ; gain = 472.137
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 803.980 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 902.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 902.520 ; gain = 605.586
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 902.520 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/Dev/dev-git/digital-system-design-verilog/design_practice/midterm/problem3/problem3.runs/synth_1/booth_mul_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file booth_mul_top_utilization_synth.rpt -pb booth_mul_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 30 03:52:03 2025...
