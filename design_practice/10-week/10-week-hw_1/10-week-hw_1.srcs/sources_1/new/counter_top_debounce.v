@@ -21,8 +21,8 @@ wire d_up, d_down;     // 디바운싱된 up/down 신호 (Debouncer 출력)
 // 100MHz 클럭 생성 모듈 인스턴스화
 // (슬라이드 25의 u0 모듈 포트 이름 clk_in1, clk_out1을 clk_125M, clk_100M으로 변경하여 일관성 유지)
 clk_gen_100M u0 (
-    .clk_125M(clk_125M), // 강의노트에서는 .clk_in1(clk_125M)
-    .reset(rst),
+    .clk_ref(clk_ref),// 강의노트에서는 .clk_in1(clk_125M)
+    .rst(rst),
     .clk_100M(clk_100M)  // 강의노트에서는 .clk_out1(clk_100M)
 );
 

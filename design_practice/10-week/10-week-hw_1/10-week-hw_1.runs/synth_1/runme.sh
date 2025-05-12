@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=E:/program/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/nt64;E:/program/Xilinx/Vivado/2019.2/ids_lite/ISE/lib/nt64:E:/program/Xilinx/Vivado/2019.2/bin
+  PATH=E:/program/xlilnx/Vivado/2019.2/ids_lite/ISE/bin/nt64;E:/program/xlilnx/Vivado/2019.2/ids_lite/ISE/lib/nt64:E:/program/xlilnx/Vivado/2019.2/bin
 else
-  PATH=E:/program/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/nt64;E:/program/Xilinx/Vivado/2019.2/ids_lite/ISE/lib/nt64:E:/program/Xilinx/Vivado/2019.2/bin:$PATH
+  PATH=E:/program/xlilnx/Vivado/2019.2/ids_lite/ISE/bin/nt64;E:/program/xlilnx/Vivado/2019.2/ids_lite/ISE/lib/nt64:E:/program/xlilnx/Vivado/2019.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/Dev/dev-git/digital-system-design-verilog/design_practice/10-week/10-week-hw_1/10-week-hw_1.runs/synth_1'
+HD_PWD='E:/Dev/sync-git/digital-system-design-verilog/design_practice/10-week/10-week-hw_1/10-week-hw_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log counter_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter_top.tcl
+EAStep vivado -log counter_top_debounce.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter_top_debounce.tcl
