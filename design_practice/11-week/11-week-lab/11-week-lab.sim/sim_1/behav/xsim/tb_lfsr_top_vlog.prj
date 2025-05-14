@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../11-week-lab.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../11-week-lab.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../11-week-lab.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
+"../../../../11-week-lab.srcs/sources_1/new/clk_gen_100M.v" \
+"../../../../11-week-lab.srcs/sources_1/new/freq_div_100.v" \
+"../../../../11-week-lab.srcs/sources_1/new/hex2ssd.v" \
+"../../../../11-week-lab.srcs/sources_1/new/lsfr.v" \
+"../../../../11-week-lab.srcs/sources_1/new/lsfr_top.v" \
+"../../../../11-week-lab.srcs/sim_1/new/tb_lsfr_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
